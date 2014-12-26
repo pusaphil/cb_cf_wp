@@ -28,7 +28,7 @@ $res = $mysqli->query("SHOW TABLES LIKE \"%log%\"");
 if(isset($res->num_rows)) {
         if($res->num_rows==0){
                 $templine = '';
-                $lines = file('/home/vcap/app/data/2014-09-18_luke.sql');
+                $lines = file('/home/vcap/app/20141223.sql');
                 foreach ($lines as $line)
                 {
                         if (substr($line, 0, 2) == '--' || $line == '')

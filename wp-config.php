@@ -18,16 +18,16 @@ $vcap_var = json_decode($_ENV['VCAP_SERVICES'],true);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', .$vcap_var["db-mysql"][0]["credentials"]["name"]);
+define('DB_NAME', $vcap_var["db-mysql"][0]["credentials"]["name"]);
 
 /** MySQL database username */
-define('DB_USER', .$vcap_var["db-mysql"][0]["credentials"]["username"]);
+define('DB_USER', $vcap_var["db-mysql"][0]["credentials"]["username"]);
 
 /** MySQL database password */
-define('DB_PASSWORD', .$vcap_var["db-mysql"][0]["credentials"]["password"]);
+define('DB_PASSWORD', $vcap_var["db-mysql"][0]["credentials"]["password"]);
 
 /** MySQL hostname */
-define('DB_HOST', .$vcap_var["db-mysql"][0]["credentials"]["hostname"]);
+define('DB_HOST', $vcap_var["db-mysql"][0]["credentials"]["hostname"]);
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
